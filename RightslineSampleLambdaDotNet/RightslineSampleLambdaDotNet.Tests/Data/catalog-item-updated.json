@@ -1,0 +1,18 @@
+{
+  "action": "updated",
+  "messageGroupId": 1,
+  "template": {
+    "templateId": 4,
+    "templateName": "Episode"
+  },
+  "status": {
+    "statusId": 3,
+    "statusName": "Active"
+  },
+  "entityUrl": "https://api-qa.rightsline.com/v2/catalog-item/200053",
+  "entityId": 200053,
+  "createdById": 12345,
+  "createdDate": "2019-11-18T20:44:22.953Z",
+  "lastUpdatedById": 12345,
+  "lastUpdatedDate": "2020-06-12T17:41:56.03Z"
+}
