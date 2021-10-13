@@ -8,8 +8,8 @@ namespace RightslineSampleLambdaDotNetV4
     {
         [Description("catalog-item")]
         CatalogItem = 1,
-        [Description("rightset")]
-        Rightset = 3,
+        [Description("right")]
+        Right = 3,
     }
 
     public static class Enumerations

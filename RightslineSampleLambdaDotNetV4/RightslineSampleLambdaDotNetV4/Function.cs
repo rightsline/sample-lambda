@@ -58,8 +58,8 @@ namespace RightslineSampleLambdaDotNetV4
                             Console.WriteLine($"Catalog-Item message received.");
                             break;
 
-                        case CharTypeID.Rightset:
-                            Console.WriteLine($"Rightset message received.");
+                        case CharTypeID.Right:
+                            Console.WriteLine($"Right message received.");
                             break;
                     }
 

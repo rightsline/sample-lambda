@@ -30,13 +30,13 @@
     <None Update="Data\catalog-item-updated.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\rightset-created.json">
+    <None Update="Data\right-created.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\rightset-deleted.json">
+    <None Update="Data\right-deleted.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\rightset-updated.json">
+    <None Update="Data\right-updated.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -28,21 +28,21 @@ namespace RightslineSampleLambdaDotNetV4.Tests
         }
 
         [Fact]
-        public async Task RightsetCreated()
+        public async Task RightCreated()
         {
-            await SendSNSMessageAsync(Path.GetFullPath("./../../../Data/rightset-created.json"));
+            await SendSNSMessageAsync(Path.GetFullPath("./../../../Data/right-created.json"));
         }
 
         [Fact]
-        public async Task RightsetUpdated()
+        public async Task RightUpdated()
         {
-            await SendSNSMessageAsync(Path.GetFullPath("./../../../Data/rightset-updated.json"));
+            await SendSNSMessageAsync(Path.GetFullPath("./../../../Data/right-updated.json"));
         }
 
         [Fact]
-        public async Task RightsetDeleted()
+        public async Task RightDeleted()
         {
-            await SendSNSMessageAsync(Path.GetFullPath("./../../../Data/rightset-deleted.json"));
+            await SendSNSMessageAsync(Path.GetFullPath("./../../../Data/right-deleted.json"));
         }
 
 

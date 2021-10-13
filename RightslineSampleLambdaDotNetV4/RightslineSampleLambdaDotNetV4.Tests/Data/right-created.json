@@ -7,7 +7,7 @@
       "Type": "Notification",
       "MessageId": "cdf808c1-db03-5564-be3b-511b73aef3e0",
       "TopicArn": "arn:aws:sns:us-west-2:013474081760:dev-rtl-div165-v4-ct3",
-      "Subject": "RIGHTSET #1 CREATED",
+      "Subject": "RIGHT #1 CREATED",
       "Message": "{\"rootEntity\":{\"entityId\":26,\"charTypeId\":1,\"template\":{\"templateId\":19,\"templateName\":\"Movie\",\"processId\":5,\"processName\":\"Available Catalog Workflow\"},\"status\":{\"statusId\":11,\"statusName\":\"Approved\"}},\"action\":\"created\",\"messageGroupId\":3,\"entity\":{\"entityId\":1,\"charTypeId\":3,\"template\":{\"templateId\":12,\"templateName\":\"Holdback/Reserved Rights\",\"processId\":23,\"processName\":\"Rights Workflow\"},\"status\":{\"statusId\":0,\"statusName\":null}},\"createdById\":663999,\"createdDate\":\"2021-10-08T20:13:20.11Z\",\"lastUpdatedById\":663999,\"lastUpdatedDate\":\"2021-10-08T20:13:20.11Z\",\"statusUpdatedById\":663999,\"statusUpdatedDate\":\"2021-10-08T20:13:20.11Z\"}",
       "Timestamp": "2021-10-08T20:13:33.074Z",
       "SignatureVersion": "1",
