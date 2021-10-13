@@ -1,0 +1,41 @@
+[
+  {
+    "EventSource": "aws:sns",
+    "EventVersion": "1.0",
+    "EventSubscriptionArn": "arn:aws:sns:us-east-1:123456789012:lambda_topic:0b6941c3-f04d-4d3e-a66d-b1df00e1e381",
+    "Sns": {
+      "Type": "Notification",
+      "MessageId": "cdf808c1-db03-5564-be3b-511b73aef3e0",
+      "TopicArn": "arn:aws:sns:us-west-2:013474081760:dev-rtl-div165-v4-ct3",
+      "Subject": "RIGHTSET #1 CREATED",
+      "Message": "{\"rootEntity\":{\"entityId\":26,\"charTypeId\":1,\"template\":{\"templateId\":19,\"templateName\":\"Movie\",\"processId\":5,\"processName\":\"Available Catalog Workflow\"},\"status\":{\"statusId\":11,\"statusName\":\"Approved\"}},\"action\":\"created\",\"messageGroupId\":3,\"entity\":{\"entityId\":1,\"charTypeId\":3,\"template\":{\"templateId\":12,\"templateName\":\"Holdback/Reserved Rights\",\"processId\":23,\"processName\":\"Rights Workflow\"},\"status\":{\"statusId\":0,\"statusName\":null}},\"createdById\":663999,\"createdDate\":\"2021-10-08T20:13:20.11Z\",\"lastUpdatedById\":663999,\"lastUpdatedDate\":\"2021-10-08T20:13:20.11Z\",\"statusUpdatedById\":663999,\"statusUpdatedDate\":\"2021-10-08T20:13:20.11Z\"}",
+      "Timestamp": "2021-10-08T20:13:33.074Z",
+      "SignatureVersion": "1",
+      "Signature": "UNDLsKfCJzuKAvt3zoTpfNF7x3lmVeYrure/EZnzLH+Y60fPfKeZo1oehSlAEjJqnUuHehx8CCm+2rOVl50zYKuaVgTmAW/t5oZ97u2JrulI1tyF0T0oeiytGhnpAwlSPpK7j17D0UJc3TpPuxfIeqMXdoiyxV+YOVI/ghqwHV6rgDlwUs7/mNEBHgQkqlDi0Zq2emyPOhcSE2F+5/mDZf9OfZdi6i9yo27HL1gewmiCYtkVC0GoHq2ZJmJQJxOfEvZbdsRVo9n+PZWjeNkttd7jgWpyCJ4bTG8CEeIyCfDAzgKSOc5AwQU6ly+JNIMyuBJoCEQCbcbDvvdaxfFUcw==",
+      "SigningCertURL": "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-7ff5318490ec183fbaddaa2a969abfda.pem",
+      "UnsubscribeURL": "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:013474081760:dev-rtl-div165-v4-ct3:5daed9a7-cf51-43cd-9d6b-0c8b7a444f5f",
+      "MessageAttributes": {
+        "statusID": {
+          "Type": "Number",
+          "Value": "0"
+        },
+        "action": {
+          "Type": "String",
+          "Value": "created"
+        },
+        "charTypeID": {
+          "Type": "Number",
+          "Value": "3"
+        },
+        "templateID": {
+          "Type": "Number",
+          "Value": "12"
+        },
+        "userID": {
+          "Type": "Number",
+          "Value": "663999"
+        }
+      }
+    }
+  }
+]

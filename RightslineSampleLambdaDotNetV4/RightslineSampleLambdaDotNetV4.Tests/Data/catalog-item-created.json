@@ -1,0 +1,41 @@
+[
+  {
+    "EventSource": "aws:sns",
+    "EventVersion": "1.0",
+    "EventSubscriptionArn": "arn:aws:sns:us-east-1:123456789012:lambda_topic:0b6941c3-f04d-4d3e-a66d-b1df00e1e381",
+    "Sns": {
+      "Type": "Notification",
+      "MessageId": "4acd45ae-b95e-57af-a622-1c7437f1cf01",
+      "TopicArn": "arn:aws:sns:us-west-2:013474081760:dev-rtl-div165-v4-ct1",
+      "Subject": "CATALOG-ITEM #32 CREATED",
+      "Message": "{\"action\":\"created\",\"messageGroupId\":1,\"entity\":{\"entityId\":32,\"charTypeId\":1,\"template\":{\"templateId\":21,\"templateName\":\"Series\",\"processId\":5,\"processName\":\"Available Catalog Workflow\"},\"status\":{\"statusId\":0,\"statusName\":null}},\"createdById\":663999,\"createdDate\":\"2021-10-08T18:22:21.937Z\",\"lastUpdatedById\":663999,\"lastUpdatedDate\":\"2021-10-08T18:22:21.937Z\",\"statusUpdatedById\":663999,\"statusUpdatedDate\":\"2021-10-08T18:22:21.937Z\"}",
+      "Timestamp": "2021-10-08T18:22:39.576Z",
+      "SignatureVersion": "1",
+      "Signature": "Pi6tJrOEz/TY+SdwHqT02uL9QZekh6Wq1pMGqOuIzK/kv5b6BgrzfRrcdi8dJfcIjtaXIRv6WS9h+necmetVsR5SSFd68zOPB6+67ktBKR+LSvRI7x7YugYO1pjDXPJjRyAGkqQGxQx/WzABDyKnyDH8+9Oz3PXMtl9Q3b/1BRRXIB1Hxx836lp0tWou6MJgLgOcwyavULseX+YK+jfl8JHYf0DGAkd+Oq8D70crdOTtN0IGqPd+J21x6h9GcVcuOxmL8IKiqyKdWNwtNRE5cggQyWCp0dUBNz3J+pZ0fyVgeXxcmwhNZtomiX/65xAGOxsD23ul8/QwEeedg8iC+w==",
+      "SigningCertURL": "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-7ff5318490ec183fbaddaa2a969abfda.pem",
+      "UnsubscribeURL": "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:013474081760:dev-rtl-div165-v4-ct1:d4805770-c1a0-428b-bb3f-1581259c5e48",
+      "MessageAttributes": {
+        "statusID": {
+          "Type": "Number",
+          "Value": "0"
+        },
+        "action": {
+          "Type": "String",
+          "Value": "created"
+        },
+        "charTypeID": {
+          "Type": "Number",
+          "Value": "1"
+        },
+        "templateID": {
+          "Type": "Number",
+          "Value": "21"
+        },
+        "userID": {
+          "Type": "Number",
+          "Value": "663999"
+        }
+      }
+    }
+  }
+]
