@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6D67E4F4-19E5-405E-8AC9-1ECA28885F54}") = "RightslineSampleLambdaDotNetV4.Tests", "RightslineSampleLambdaDotNetV4.Tests\RightslineSampleLambdaDotNetV4.Tests.csproj", "{4BD2E34A-3FE8-480A-8781-7FC39B9EBD83}"
+EndProject
+Project("{6D67E4F4-19E5-405E-8AC9-1ECA28885F54}") = "RightslineSampleLambdaDotNetV4", "RightslineSampleLambdaDotNetV4\RightslineSampleLambdaDotNetV4.csproj", "{047CE778-010B-4B98-AD9F-D3900D43A13E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BD2E34A-3FE8-480A-8781-7FC39B9EBD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD2E34A-3FE8-480A-8781-7FC39B9EBD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD2E34A-3FE8-480A-8781-7FC39B9EBD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD2E34A-3FE8-480A-8781-7FC39B9EBD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047CE778-010B-4B98-AD9F-D3900D43A13E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047CE778-010B-4B98-AD9F-D3900D43A13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047CE778-010B-4B98-AD9F-D3900D43A13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047CE778-010B-4B98-AD9F-D3900D43A13E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C73F4F58-E51E-4319-9A84-C04ED790E79B}
+	EndGlobalSection
+EndGlobal
