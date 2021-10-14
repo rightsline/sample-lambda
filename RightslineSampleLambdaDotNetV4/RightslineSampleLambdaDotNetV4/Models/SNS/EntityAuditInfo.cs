@@ -2,22 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace RightslineSampleLambdaDotNetV4.Models
+namespace RightsLine.Contracts.MessageQueuing.V4.Messages
 {
-
-    public class ModuleEntityMessage : EntityAuditInfo
-    {
-        public string Action { get; set; }
-        public int MessageGroupId { get; set; }
-        public MessageEntity Entity { get; set; }
-
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public List<MessageEntity> ChildrenAdded { get; set; }
-
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public List<MessageEntity> ChildrenRemoved { get; set; }
-    }
-
+    
     public class EntityAuditInfo
     {
         public EntityAuditInfo()
@@ -71,34 +58,5 @@ namespace RightslineSampleLambdaDotNetV4.Models
 
     }
 
-
-
-    public class MessageEntity
-    {
-        public int EntityId { get; set; }
-        public int CharTypeId { get; set; }
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public MessageEntityTemplate Template { get; set; }
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public MessageEntityStatus Status { get; set; }
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public MessageEntity ParentEntity { get; set; }
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public MessageEntity ChildEntity { get; set; }
-    }
-
-    public class MessageEntityTemplate
-    {
-        public int TemplateId { get; set; }
-        public string TemplateName { get; set; }
-        public int ProcessId { get; set; }
-        public string ProcessName { get; set; }
-    }
-
-    public class MessageEntityStatus
-    {
-        public int StatusId { get; set; }
-        public string StatusName { get; set; }
-    }
 
 }

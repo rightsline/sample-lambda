@@ -1,4 +1,5 @@
-﻿using RightslineSampleLambdaDotNetV4.Consts;
+﻿using RightsLine.Contracts.RestApi.V4;
+using RightslineSampleLambdaDotNetV4.Consts;
 using RightslineSampleLambdaDotNetV4.Models;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,11 @@ namespace RightslineSampleLambdaDotNetV4.RightslineAPI
         {
         }
 
-        public async Task<EntityModel> Get(string endpoint, long id)
+        public async Task<EntityRestModel> Get(string endpoint, long id)
         {
             try
             {
-                var response = await this.GatewayApiClient.Request<EntityModel>($"{endpoint}/" + id.ToString(), HttpMethod.Get);
-
+                var response = await this.GatewayApiClient.Request<EntityRestModel>($"{endpoint}/" + id.ToString(), HttpMethod.Get);
                 return response;
             }
             catch (Exception ex)
@@ -28,11 +28,11 @@ namespace RightslineSampleLambdaDotNetV4.RightslineAPI
             }
         }
 
-        public async Task<EntityModel> Put(string endpoint, long id, string entityJSON)
+        public async Task<EntityRestModel> Put(string endpoint, long id, string entityJSON)
         {
             try
             {
-                var response = await this.GatewayApiClient.Request<EntityModel>($"{endpoint}/" + id.ToString(), HttpMethod.Put, entityJSON);
+                var response = await this.GatewayApiClient.Request<EntityRestModel>($"{endpoint}/" + id.ToString(), HttpMethod.Put, entityJSON);
 
                 return response;
             }
@@ -70,11 +70,11 @@ namespace RightslineSampleLambdaDotNetV4.RightslineAPI
             }
         }
 
-        public async Task<IEnumerable<EntityModel>> Search(string endpoint, string query)
+        public async Task<IEnumerable<EntityRestModel>> Search(string endpoint, string query)
         {
             try
             {
-                var response = await this.GatewayApiClient.Request<EntitySearchModel>($"{endpoint}/search", HttpMethod.Post, query);
+                var response = await this.GatewayApiClient.Request<EntitySearchResponse>($"{endpoint}/search", HttpMethod.Post, query);
 
                 var numFound = response.NumFound;
 

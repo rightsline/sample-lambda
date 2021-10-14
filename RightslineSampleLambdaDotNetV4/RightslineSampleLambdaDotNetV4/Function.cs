@@ -1,6 +1,7 @@
 ﻿using Amazon.Lambda.Core;
 using Amazon.Lambda.SNSEvents;
 using Newtonsoft.Json;
+using RightsLine.Contracts.MessageQueuing.V4.Messages;
 using RightslineSampleLambdaDotNetV4.Consts;
 using RightslineSampleLambdaDotNetV4.Models;
 using RightslineSampleLambdaDotNetV4.RightslineAPI;
@@ -102,6 +103,30 @@ namespace RightslineSampleLambdaDotNetV4
                     {
                         Console.WriteLine($"Cannot find Catalog Items with template id {messageEntity.Entity.Template.TemplateId}.");
                         Console.WriteLine("Lambda processing aborted");
+                    }
+
+
+
+
+                    //
+                    //Example for fetching additional rights information for a right-update message
+                    //
+                    if (charType == CharTypeID.Right && action == EntityBaseMessageActions.EntityActionUpdated)
+                    {
+                        var rightResult = await this._v4.Get("right", messageEntity.Entity.EntityId);
+
+
+                        //
+                        //example call to get 10 catalog items associated to a rightset when it is changed
+                        //
+                        var rightSearchPayload = @"{
+                                ""start"": 0,
+                                ""rows"": 10,
+                                ""childQuery"": { 3:{ ""$eq"":[""recordid"", " + messageEntity.Entity.EntityId  + @"]} }
+                                }
+                                ";
+
+                        var catalogRightResults = await this._v4.Search("catalog-item", rightSearchPayload);
                     }
 
 
