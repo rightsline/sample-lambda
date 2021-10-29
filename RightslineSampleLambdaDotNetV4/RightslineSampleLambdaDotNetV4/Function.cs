@@ -106,6 +106,41 @@ namespace RightslineSampleLambdaDotNetV4
                     }
 
 
+                    //
+                    //Example for checking if the catalog item / title is available
+                    //Additional information related to this call can be found @ https://api-docs.rightsline.com/v/4-1/avails/avails-is-catalog-item-available
+                    //
+                    var isCatalogItemAvailablePayload = @"
+                        {
+                          ""recordId"": " + messageEntity.Entity.EntityId + @",
+                          ""dim1"": [2],
+                          ""dim2"": [1],
+                          ""dim3"": [4],
+                          ""windowStart"": ""2018-12-22"", 
+                          ""windowEnd"": ""2019-12-22"",   
+                          ""isExclusive"": true,
+                        }";
+                    var catalogItemAvailable = await this._v4.IsCatalogItemAvailable(isCatalogItemAvailablePayload);
+
+
+                    //
+                    //Example for fetching availability information
+                    //Additional information related to this call can be found @ https://api-docs.rightsline.com/v/4-1/avails/avails-get-availability
+                    //
+                    var getAvailablilityPayload = @"
+                    {
+                        ""recordId"": [
+                              " + messageEntity.Entity.EntityId + @"
+                            ], 
+                            ""windowStart"": ""2018-02-13"", 
+                            ""windowEnd"": ""2021-10-31"",   
+                            ""matchType"": ""CoverEntire"",
+                            ""isExclusive"": false,
+                            ""start"": 0,   
+                            ""rows"": 25
+                        }";
+
+                    var availability = await this._v4.GetAvailability(getAvailablilityPayload);
 
 
                     //
@@ -122,7 +157,7 @@ namespace RightslineSampleLambdaDotNetV4
                         var rightSearchPayload = @"{
                                 ""start"": 0,
                                 ""rows"": 10,
-                                ""childQuery"": { 3:{ ""$eq"":[""recordid"", " + messageEntity.Entity.EntityId  + @"]} }
+                                ""childQuery"": { 3:{ ""$eq"":[""recordid"", " + messageEntity.Entity.EntityId + @"]} }
                                 }
                                 ";
 
