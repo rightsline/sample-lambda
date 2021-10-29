@@ -22,6 +22,46 @@ namespace RightsLine.Contracts.RestApi.V4
         public Dictionary<int, JObject> ChildQuery { get; set; } = new Dictionary<int, JObject>();
     }
 
+
+    public class EntityTitleAvailableResponse
+    {
+        public bool IsAvailable { get; set; }
+        public bool IsExclusive { get; set; }
+    }
+
+    public class EntityAvailabilityResponse
+    {
+        public int RowCount { get; set; }
+        public List<EntityAvailabilityCalculationResponse> Rows { get; set; } = new List<EntityAvailabilityCalculationResponse>();
+    }
+
+    public class EntityAvailabilityCalculationResponse: EntityAvailableCatalogItemRestModel
+    {
+        public DateTime LastUpdatedDate { get; set; }
+        public EntityTemplateRestModel Template { get; set; }
+        public EntityStatusRestModel Status { get; set; }
+        [JsonConverter(typeof(CustomIsoDateOnlyConverter))]
+        public DateTime WindowStart { get; set; }
+        [JsonConverter(typeof(CustomIsoDateOnlyConverter))]
+        public DateTime WindowEnd { get; set; }
+        public List<CharDataRestModel> Dim1 { get; set; } = null;
+        public List<CharDataRestModel> Dim2 { get; set; } = null;
+        public List<CharDataRestModel> Dim3 { get; set; } = null;
+        public List<CharDataRestModel> Dim4 { get; set; } = null;
+        public bool IsExclusive { get; set; }
+        public bool IsExact { get; set; }
+        public string MatchType { get; set; }
+        public string Available { get; set; }
+        public string ReasonUnavailable { get; set; }
+    }
+
+    public class EntityAvailableCatalogItemRestModel
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+    }
+
+
     public class EntitySearchResponse
     {
         public int NumFound { get; set; }

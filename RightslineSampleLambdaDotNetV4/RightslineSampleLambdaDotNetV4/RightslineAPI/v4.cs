@@ -85,5 +85,42 @@ namespace RightslineSampleLambdaDotNetV4.RightslineAPI
                 throw new Exception($"Error {endpoint} SEARCH: {ex.Message}");
             }
         }
+
+
+        //
+        //Additional information related to this call can be found @ https://api-docs.rightsline.com/v/4-1/avails/avails-is-catalog-item-available
+        //
+        public async Task<EntityTitleAvailableResponse> IsCatalogItemAvailable(string criteria)
+        {
+
+            try
+            {
+                var endpoint = $"avails/is-title-available";
+                var response = await this.GatewayApiClient.Request<EntityTitleAvailableResponse>(endpoint, HttpMethod.Post, criteria);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error on IsCatalogItemAvailable POST: {ex.Message}");
+            }
+        }
+
+        //
+        //Additional information related to this call can be found @ https://api-docs.rightsline.com/v/4-1/avails/avails-get-availability
+        //
+        public async Task<EntityAvailabilityResponse> GetAvailability(string criteria)
+        {
+            try
+            {
+                var endpoint = $"avails/availability";
+                var response = await this.GatewayApiClient.Request<EntityAvailabilityResponse>(endpoint, HttpMethod.Post, criteria);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error on GetAvailability POST: {ex.Message}");
+            }
+        }
+
     }
 }
